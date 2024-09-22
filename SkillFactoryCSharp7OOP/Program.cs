@@ -2,22 +2,46 @@
 
 class Program
 {
-    class Employee
+    class Groceries
     {
-        public string Name;
-        public int Age;
-        public int Salary;
+
     }
 
-    class ProjectManager : Employee
+    class Fruit : Groceries
     {
-        public string ProjectName;
+
     }
 
-    class Developer : Employee
+    class Vegetable : Groceries
     {
-        public string ProgrammingLanguage;
+
     }
+
+    class Apple : Fruit
+    {
+
+    }
+
+    class Pear : Fruit
+    {
+
+    }
+
+    class Banana : Fruit
+    {
+
+    }
+
+    class Carrot : Vegetable
+    {
+
+    }
+
+    class Potato : Vegetable
+    {
+
+    }
+
 
     public static void Main(string[] args)
     {
