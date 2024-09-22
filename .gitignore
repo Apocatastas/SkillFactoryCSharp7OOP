@@ -16,6 +16,8 @@
 #Mac-specified files
 *.DS_Store
 ._*
+SkillFactoryCSharp7OOP/*.DS_Store
+SkillFactoryCSharp7OOP/._*
 
 # Mono auto generated files
 mono_crash.*
@@ -33,6 +35,8 @@ x86/
 bld/
 [Bb]in/
 [Oo]bj/
+SkillFactoryCSharp7OOP/bin
+SkillFactoryCSharp7OOP/obj
 [Ll]og/
 [Ll]ogs/
 
