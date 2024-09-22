@@ -2,44 +2,20 @@
 
 class Program
 {
-    class Groceries
+    class Obj
     {
+        private string name;
+        private string owner;
+        private int length;
+        private int count;
 
-    }
-
-    class Fruit : Groceries
-    {
-
-    }
-
-    class Vegetable : Groceries
-    {
-
-    }
-
-    class Apple : Fruit
-    {
-
-    }
-
-    class Pear : Fruit
-    {
-
-    }
-
-    class Banana : Fruit
-    {
-
-    }
-
-    class Carrot : Vegetable
-    {
-
-    }
-
-    class Potato : Vegetable
-    {
-
+        public Obj(string name, string ownerName, int objLength, int count)
+        {
+            this.name = name;
+            owner = ownerName;
+            length = objLength;
+            this.count = count;
+        }
     }
 
 
