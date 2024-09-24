@@ -2,14 +2,15 @@
 
 class Program
 {
-    //Для класса DerivedClass создайте 2 конструктора: один, принимающий
-    //2 параметра — name и description, второй — принимающий 3 параметра name,
-    //description и counter.
-
-
     class BaseClass
     {
         protected string Name;
+
+        public virtual int Counter
+        {
+            get;
+            set;
+        }
 
         public BaseClass(string name)
         {
@@ -26,7 +27,27 @@ class Program
     {
         public string Description;
 
-        public int Counter;
+        public int counter;
+
+        public override int Counter
+        {
+            get
+            {
+                return counter;
+            }
+            
+            set
+            {
+                if (value < 0)
+                {
+                    Console.WriteLine("Счётчик не может быть отрицательным");
+                }
+                else
+                {
+                    counter = value;
+                }
+            }
+        }
 
         override public void Display()
         {
