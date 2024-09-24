@@ -15,6 +15,11 @@ class Program
         {
             Name = name;
         }
+
+        virtual public void Display()
+        {
+            Console.WriteLine("Метод класса BaseClass");
+        }
     }
 
     class DerivedClass : BaseClass
@@ -22,6 +27,11 @@ class Program
         public string Description;
 
         public int Counter;
+
+        override public void Display()
+        {
+            Console.WriteLine("Метод класса DerivedClass");
+        }
 
         public DerivedClass(string name, string description) : base(name)
         {
