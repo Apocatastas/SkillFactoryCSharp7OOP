@@ -12,6 +12,11 @@ class Program
             set;
         }
 
+        public BaseClass()
+        {
+           
+        }
+
         public BaseClass(string name)
         {
             Name = name;
@@ -51,7 +56,13 @@ class Program
 
         override public void Display()
         {
+            base.Display();
             Console.WriteLine("Метод класса DerivedClass");
+        }
+
+        public DerivedClass()
+        { 
+           
         }
 
         public DerivedClass(string name, string description) : base(name)
@@ -67,6 +78,8 @@ class Program
 
     public static void Main(string[] args)
     {
-
+        DerivedClass obj = new DerivedClass();
+        obj.Display();
+        Console.ReadKey();
     }
 }
