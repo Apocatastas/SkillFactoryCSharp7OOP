@@ -3,26 +3,40 @@ using System.Numerics;
 
 class Program
 {
-    class Obj
+    class IndexingClass
     {
-        public int Value;
+        private int[] array;
+
+        public IndexingClass(int[] array)
+        {
+            this.array = array;
+
+        }
+
+        // Индексатор по массиву
+        public int this[int index]
+        {
+            get
+            {
+                return array[index];
+            }
+
+            set
+            {
+                array[index] = value;
+            }
+        }
+
+
     }
 
-    static Obj operator +(Obj a, Obj b)
-    {
-        return new Obj
-        {
-            Value = a.Value + b.Value
-        };
-    }
 
-    static Obj operator -(Obj a, Obj b)
-    {
-        return new Obj
-        {
-            Value = a.Value - b.Value
-        };
-    }
+
+
+
+
+
+
 
     public static void Main(string[] args)
     {
