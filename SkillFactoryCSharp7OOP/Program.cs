@@ -1,31 +1,29 @@
 ﻿using System;
 using System.Numerics;
 
-class Program
-{
 
-    class Obj
+    /*
+    Для класса int создайте 2 метода расширения: GetNegative() и GetPositive().
+
+    Метод GetNegative должен возвращать отрицательное значение переменной
+    (если оно положительно), либо саму переменную (если оно отрицательно или равно 0).
+
+    Метод GetPositive должен, наоборот, возвращать положительное значение
+    (если оно отрицательно), либо саму переменную (если оно положительно или равно 0).
+    */
+
+
+    static class IntExtensions
     {
-        public string Name;
-        public string Description;
-
-        public static string Parent;
-        public static int DaysInWeek;
-        public static int MaxValue;
-
-        Obj()
+        public static int GetNegative(this int source)
         {
-        Parent = "System.Object";
-        DaysInWeek = 7;
-        MaxValue = 2000;
+            if (source > 0) return (-1 * source);
+            else  return source;
+        }
 
+        public static int GetPositive(this int source)
+        {
+            if (source < 0) return (-1 * source);
+            else return source;
+        }
     }
-}
-
-
-    public static void Main(string[] args)
-    {
-
-        Console.ReadKey();
-    }
-}
