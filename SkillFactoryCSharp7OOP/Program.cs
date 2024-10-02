@@ -3,41 +3,46 @@ using System.Numerics;
 
 
 /*
-Добавьте к схеме классов автомобиля следующие классы частей автомобиля:
-Battery, Differential, Wheel.
-Также добавьте в класс Car виртуальный обобщённый метод без реализации
-— ChangePart, который будет принимать один параметр — newPart универсального типа.
+Установите ограничения на универсальные типы в классе Car.
+Такие, чтобы поле Engine могло принимать тип ElectricEngine и GasEngine,
+а параметр newPart метода ChangePart мог бы принимать только типы частей машины
+(Battery, Differential, Wheel).
 */
 
-public class Car<T1>
+public class Car<TEngine> where TEngine : Engine
 {
-    public T1 Engine;
-    public virtual void Changepart<T2>(T2 newpart)
+    public TEngine Engine;
+    public virtual void Changepart<TCarPart>(TCarPart newpart) where TCarPart : CarPart
     {
     }
 }
 
-public class ElectricEngine
+public class Engine
+{ }
+
+public class CarPart { }
+
+public class ElectricEngine : Engine
 {
 
 }
 
-public class GasEngine
+public class GasEngine : Engine
 {
 
 }
 
-public class Battery
+public class Battery : CarPart
 {
 
 }
 
-public class Differential
+public class Differential : CarPart
 {
 
 }
 
-public class Wheel
+public class Wheel : CarPart
 {
 
 }
