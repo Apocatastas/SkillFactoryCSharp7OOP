@@ -3,17 +3,36 @@ using System.Numerics;
 
 
 /*
-Установите ограничения на универсальные типы в классе Car.
-Такие, чтобы поле Engine могло принимать тип ElectricEngine и GasEngine,
-а параметр newPart метода ChangePart мог бы принимать только типы частей машины
-(Battery, Differential, Wheel).
+С учётом полученных знаний по наследованию обобщений,
+дополните схему классов автомобиля, добавив классы для электромобиля и бензинового
+— ElectricCar и GasCar.
+
+Подумайте, какой класс или классы можно сделать абстрактными.
+Сделайте абстрактными их и их члены (по возможности).
 */
 
-public class Car<TEngine> where TEngine : Engine
+public abstract class Car<TEngine> where TEngine : Engine
 {
     public TEngine Engine;
-    public virtual void Changepart<TCarPart>(TCarPart newpart) where TCarPart : CarPart
+    public abstract void Changepart<TCarPart>(TCarPart newPart) where TCarPart : CarPart;
+   
+}
+
+
+class ElectricCar<TEngine> : Car<ElectricEngine>
+{
+    public override void Changepart<TCarPart>(TCarPart newPart)
     {
+
+    }
+}
+
+class GasCar<TEngine> : Car<GasEngine>
+{
+
+    public override void Changepart<TCarPart>(TCarPart newPart)
+    {
+      
     }
 }
 
