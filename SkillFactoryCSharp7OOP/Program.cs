@@ -3,17 +3,41 @@ using System.Numerics;
 
 
 /*
-Реализуйте класс-обобщение Record, у которого будут два универсальных параметра:
-один — для идентификатора записи (Id),
-другой — для значения записи (Value).
-Также в классе реализуйте поле Date типа DateTime.
+Добавьте к схеме классов автомобиля следующие классы частей автомобиля:
+Battery, Differential, Wheel.
+Также добавьте в класс Car виртуальный обобщённый метод без реализации
+— ChangePart, который будет принимать один параметр — newPart универсального типа.
 */
 
-
-public class Record <T1, T2>
+public class Car<T1>
+{
+    public T1 Engine;
+    public virtual void Changepart<T2>(T2 newpart)
     {
-    public T1 Id;
-    public T2 Value;
-    public DateTime Date;
     }
+}
 
+public class ElectricEngine
+{
+
+}
+
+public class GasEngine
+{
+
+}
+
+public class Battery
+{
+
+}
+
+public class Differential
+{
+
+}
+
+public class Wheel
+{
+
+}
